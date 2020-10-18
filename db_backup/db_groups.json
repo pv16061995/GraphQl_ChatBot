@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5f8c42a180be395aee8fc159"},"user_ids":["5f8a4dc49978fd090933777d"],"is_active":true,"is_deleted":false,"created_date":{"$date":"2020-10-18T07:56:55.000Z"},"last_updated":{"$date":"2020-10-18T07:56:55.000Z"},"group_name":"test","__v":0}
+{"_id":{"$oid":"5f8c42ac80be395aee8fc15a"},"user_ids":["5f8a4dc49978fd090933777d","5f8a4dc49978fd090933778d"],"is_active":true,"is_deleted":false,"created_date":{"$date":"2020-10-18T07:56:55.000Z"},"last_updated":{"$date":"2020-10-18T07:56:55.000Z"},"group_name":"test","__v":0}

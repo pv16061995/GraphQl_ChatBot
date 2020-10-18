@@ -1,0 +1,116 @@
+### SendMessage
+
+Request
+===========================
+
+mutation SendMessageMutation(
+  $from: String!
+  $message: String!
+  $groupId: String!
+) {
+  sendMessage(from: $from, groupId: $groupId, message: $message) {
+    id
+    from
+    message
+  }
+}
+
+Query Params 
+=============================
+
+{"from": "mm1221", "message": "asdfghj","groupId": "5f8c42a180be395aee8fc159" }
+
+Response 
+===============================
+
+{
+  "data": {
+    "sendMessage": {
+      "id": "1",
+      "from": "mm1221",
+      "message": "asdfghj"
+    }
+  }
+}
+
+
+================================================================================
+######## MessageSentSubscription
+
+
+Request:
+=========================
+
+subscription MessageSentSubscription($groupId: String!) {
+        messageSent (groupId: $groupId) {
+          id
+          from
+          message
+        }
+      }
+
+
+ Query Params
+ ================
+
+ {"groupId": "1"}
+
+ Response 
+ ====================
+ {
+  "data": {
+    "messageSent": {
+      "id": 2,
+      "from": "mm1221",
+      "message": "hie"
+    }
+  }
+}
+
+===================================================================
+
+#############  Message List
+
+Request
+
+===============
+
+query chats ($groupId: String!) {
+  chats(groupId: $groupId) {
+    id
+    from
+    message
+  }
+}
+Query Params
+====================
+
+{"groupId":"5f8c42ac80be395aee8fc15a"}
+
+Response 
+=================
+
+
+{
+  "data": {
+    "chats": [
+      {
+        "id": "5f8c4eacc503207359b3f474",
+        "from": "5f8a4dc49978fd090933777d",
+        "message": "hi"
+      },
+      {
+        "id": "5f8c612d89a40316580de5e1",
+        "from": "5f8a4dc49978fd090933777d",
+        "message": "hi12"
+      },
+      {
+        "id": "5f8c613389a40316580de5e2",
+        "from": "5f8a4dc49978fd090933777d",
+        "message": "hi123"
+      }
+    ]
+  }
+}
+
+

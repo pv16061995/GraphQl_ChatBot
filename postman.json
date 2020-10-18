@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "4910c321-c72c-4c94-8e36-da8cc85bd9a5",
+		"name": "GraphQl Chat Bot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Group list Pagenated API",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJ0b2tlblRpbWUiOiIxOC1PY3QtMjAyMCwgNTo1NDoxNiBQTSIsImlhdCI6MTYwMzA0MzY1OSwiZXhwIjoxNjAzMDQ1NDU5fQ.JuYr1i91_HzNwz1FjkEKl36qeK84lHUB92S9tS8Tzs4vKTrqHZgspsQH5N-wE8d5NJ8Ac4Rxf8S7aAVmURfCYw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/groupList?limit=1&page=2&skip=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groupList"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "skip",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@gmail.com\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
